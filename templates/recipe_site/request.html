@@ -1,0 +1,17 @@
+<div style="text-align: center;">
+    <h1>本日の楽天レシピランキングBest4</h1>
+
+        {% for list  in data %}
+            {% for key, value in list.items %}
+                {% if key == 'recipeTitle' %}
+                    <h5>{{value}}</h5>
+                {% endif %}
+                {% if key == 'rank' %}
+                    <p>{{value}}位</p>
+                {% endif %}
+                {% if key == 'foodImageUrl' %}
+                    <img src="{{value}}" width="400">
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+</div>>
